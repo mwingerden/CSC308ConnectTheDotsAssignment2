@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ConnectTheDots extends JFrame implements ActionListener {
+    DrawArea drawArea = new DrawArea();
     public static void main(String[] args) {
         ConnectTheDots connectTheDots = new ConnectTheDots();
         connectTheDots.runGUI();
@@ -30,8 +31,10 @@ public class ConnectTheDots extends JFrame implements ActionListener {
         leftPanel.add(run);
 
 
-        JPanel centerPanel = new JPanel();
+        JPanel centerPanel = drawArea;
+        centerPanel.setOpaque(true);
         centerPanel.setBackground(Color.DARK_GRAY);
+
 
         add(leftPanel, BorderLayout.WEST);
         add(centerPanel, BorderLayout.CENTER);
