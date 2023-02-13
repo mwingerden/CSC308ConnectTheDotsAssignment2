@@ -3,11 +3,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ConnectTheDots extends JFrame implements ActionListener {
+public class AssignmentTwo extends JFrame implements ActionListener {
     DrawArea drawArea = new DrawArea();
     public static void main(String[] args) {
-        ConnectTheDots connectTheDots = new ConnectTheDots();
-        connectTheDots.runGUI();
+        AssignmentTwo assignmentTwo = new AssignmentTwo();
+        assignmentTwo.runGUI();
     }
 
     public void runGUI() {
@@ -40,7 +40,7 @@ public class ConnectTheDots extends JFrame implements ActionListener {
         add(centerPanel, BorderLayout.CENTER);
 
 
-        setTitle("Connect The Dots");
+        setTitle("Connect The Colored Dots");
         setSize(500, 500);
         setVisible(true);
     }
@@ -48,13 +48,13 @@ public class ConnectTheDots extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Cluster - K-means")) {
-            System.out.println("Cluster - K-means");
+            drawArea.setCluster();
         }
         else if(e.getActionCommand().equals("Line - Nearest Neighbor")) {
-            System.out.println("Line - Nearest Neighbor");
+            drawArea.setLine();
         }
         else if(e.getActionCommand().equals("Run")) {
-            System.out.println("Run");
+            drawArea.run();
         }
     }
 }

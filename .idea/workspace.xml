@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0051434e-ddfa-4fcc-b11e-40dda95876ae" name="Changes" comment="Initial Setup.">
-      <change afterPath="$PROJECT_DIR$/src/Dot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Draw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConnectTheDots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectTheDots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectTheDots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AssignmentTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Draw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Draw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawArea.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +47,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="ConnectTheDots" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ConnectTheDots" />
+    <configuration name="AssignmentTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AssignmentTwo" />
       <module name="CSC308ConnectTheDotsAssignment2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -51,7 +56,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConnectTheDots" />
+        <item itemvalue="Application.AssignmentTwo" />
       </list>
     </recent_temporary>
   </component>
@@ -77,16 +82,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Setup." />
     <option name="LAST_COMMIT_MESSAGE" value="Initial Setup." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Dot.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
