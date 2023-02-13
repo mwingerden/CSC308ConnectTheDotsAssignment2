@@ -3,6 +3,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * The assignment class that extends itself to be a JFrame and implements ActionListener. The class has a main that
+ * runs the GUI. The class also sets up the GUI and holds implementation for user input.
+ *
+ * @author Matthew Wingerden
+ * @version 1.0
+ * @since 2023-2-13
+ *
+ */
+
 public class AssignmentTwo extends JFrame implements ActionListener {
     DrawArea drawArea = new DrawArea();
     public static void main(String[] args) {
@@ -10,6 +20,10 @@ public class AssignmentTwo extends JFrame implements ActionListener {
         assignmentTwo.runGUI();
     }
 
+    /**
+     * Runs and sets up the GUI for this assignment
+     *
+     **/
     public void runGUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
@@ -45,6 +59,10 @@ public class AssignmentTwo extends JFrame implements ActionListener {
         setVisible(true);
     }
 
+    /**
+     * Overrides the method actionPerformed in order to handle user input for the assignment.
+     *
+     **/
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Cluster - K-means")) {

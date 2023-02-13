@@ -5,11 +5,25 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * The DrawArea class is created as a JPanel to hold the drawings and user inputted clicks. Holds all the observables
+ * to be updated based on the options of the user.
+ *
+ * @author Matthew Wingerden
+ * @version 1.0
+ * @since 2023-2-13
+ *
+ */
+
 public class DrawArea extends JPanel implements MouseListener {
     private final ArrayList<Draw> observers;
     private boolean line;
     private boolean cluster;
 
+    /**
+     * Constructor for the draw area.
+     *
+     **/
     DrawArea() {
         addMouseListener(this);
         this.observers = new ArrayList<>();
@@ -17,6 +31,12 @@ public class DrawArea extends JPanel implements MouseListener {
         this.cluster = false;
     }
 
+    /**
+     * Loops through the observers and calls them to draw.
+     *
+     * @param g     Holds the graphics class to draw.
+     *
+     **/
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Collections.reverse(observers);
@@ -25,11 +45,19 @@ public class DrawArea extends JPanel implements MouseListener {
         }
     }
 
+    /**
+     * Clears the observers of lines and lets the class know if to draw the lines.
+     *
+     **/
     public void setLine() {
         observers.removeIf(drawing -> drawing instanceof Line);
         line = !line;
     }
 
+    /**
+     * Updates the dot observers to change the color based on the update method.
+     *
+     **/
     public void setCluster() {
         cluster = !cluster;
         for(Draw drawing : observers) {
@@ -39,6 +67,10 @@ public class DrawArea extends JPanel implements MouseListener {
         }
     }
 
+    /**
+     * Runs all the options that the user selected.
+     *
+     **/
     public void run() {
         if(line) {
             observers.removeIf(drawing -> drawing instanceof Line);
@@ -58,6 +90,12 @@ public class DrawArea extends JPanel implements MouseListener {
         repaint();
     }
 
+    /**
+     * Adds a new dot to the observers.
+     *
+     * @param e     Holds the mouse information.
+     *
+     **/
     @Override
     public void mouseReleased(MouseEvent e) {
         observers.add(new Dot(e.getX(), e.getY()));
@@ -72,8 +110,6 @@ public class DrawArea extends JPanel implements MouseListener {
     public void mousePressed(MouseEvent e) {
 
     }
-
-
 
     @Override
     public void mouseEntered(MouseEvent e) {
