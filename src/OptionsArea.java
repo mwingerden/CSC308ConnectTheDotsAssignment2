@@ -46,13 +46,13 @@ public class OptionsArea extends JPanel implements ActionListener, Observable {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Cluster - K-means")) {
-            cluster = !cluster;
+            drawArea.updateCluster();
         }
         else if(e.getActionCommand().equals("Line - Nearest Neighbor")) {
-            connect = !connect;
+            drawArea.updateConnect();
         }
         else if(e.getActionCommand().equals("Run")) {
-            drawArea.update(cluster, connect);
+            drawArea.update();
         }
     }
 

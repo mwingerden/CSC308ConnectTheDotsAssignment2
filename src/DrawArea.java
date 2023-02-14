@@ -17,6 +17,8 @@ import java.util.Collections;
 
 public class DrawArea extends JPanel implements MouseListener, Observer{
     private final ArrayList<Draw> drawings;
+    boolean cluster;
+    boolean connect;
 
     /**
      * Constructor for the draw area.
@@ -27,17 +29,34 @@ public class DrawArea extends JPanel implements MouseListener, Observer{
         this.drawings = new ArrayList<>();
         setOpaque(true);
         setBackground(Color.DARK_GRAY);
+        cluster = false;
+        connect = false;
+    }
+
+    /**
+     * Updates the cluster variable.
+     *
+     **/
+    @Override
+    public void updateCluster() {
+        cluster = !cluster;
+    }
+
+    /**
+     * Updates the connect variable.
+     *
+     **/
+    @Override
+    public void updateConnect() {
+        connect = !connect;
     }
 
     /**
      * An update method from the Observer interface that tells the class what options to draw.
      *
-     * @param cluster       Boolean to see if there is a need to draw a cluster.
-     * @param connect       Boolean to see if there is a need to draw lines.
-     *
      **/
     @Override
-    public void update(boolean cluster, boolean connect) {
+    public void update() {
         clear();
         if(cluster) {
             drawCluster();

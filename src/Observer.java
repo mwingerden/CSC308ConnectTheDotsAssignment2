@@ -7,5 +7,7 @@
  *
  */
 public interface Observer {
-    void update(boolean cluster, boolean connect);
+    void updateCluster();
+    void updateConnect();
+    void update();
 }
