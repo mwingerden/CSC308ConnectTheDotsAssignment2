@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * The DrawArea class is created as a JPanel to hold the drawings and user inputted clicks. Holds all the observables
@@ -75,7 +74,6 @@ public class DrawArea extends JPanel implements MouseListener, Observer{
      **/
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Collections.reverse(drawings);
         for(Draw drawing : drawings) {
             drawing.draw(g);
         }
