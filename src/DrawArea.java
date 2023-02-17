@@ -116,6 +116,11 @@ public class DrawArea extends JPanel implements MouseListener, Observer{
         }
     }
 
+    public void clearList() {
+        drawings.clear();
+        repaint();
+    }
+
     /**
      * Adds a new dot to the observers.
      *

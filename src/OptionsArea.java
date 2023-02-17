@@ -35,6 +35,10 @@ public class OptionsArea extends JPanel implements ActionListener, Observable {
         JButton run = new JButton("Run");
         run.addActionListener(this);
         add(run);
+
+        JButton clear = new JButton("Clear");
+        clear.addActionListener(this);
+        add(clear);
     }
 
     /**
@@ -53,6 +57,9 @@ public class OptionsArea extends JPanel implements ActionListener, Observable {
         }
         else if(e.getActionCommand().equals("Run")) {
             drawArea.update();
+        }
+        else if(e.getActionCommand().equals("Clear")) {
+            drawArea.clearList();
         }
     }
 
